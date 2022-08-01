@@ -37,7 +37,7 @@ Osintgram offers an interactive shell to perform analysis on Instagram account o
 - photodes        Get description of target's photos
 - photos          Download user's photos in output folder
 - propic          Download user's profile picture
-- stories         Download user's stories  
+- stories         Download user's stories
 - tagged          Get list of users tagged by target
 - wcommented      Get a list of user who commented target's photos
 - wtagged         Get a list of user who tagged target
@@ -50,38 +50,39 @@ You can find detailed commands usage [here](doc/COMMANDS.md).
 [CHANGELOG](doc/CHANGELOG.md)
 
 ## FAQ
+
 1. **Can I access the contents of a private profile?** No, you cannot get information on private profiles. You can only get information from a public profile or a profile you follow. The tools that claim to be successful are scams!
 2. **What is and how I can bypass the `challenge_required` error?** The `challenge_required` error means that Instagram notice a suspicious behavior on your profile, so needs to check if you are a real person or a bot. To avoid this you should follow the suggested link and complete the required operation (insert a code, confirm email, etc)
-
 
 ## Installation ⚙️
 
 1. Fork/Clone/Download this repo
 
-    `git clone https://github.com/Datalux/Osintgram.git`
+   `git clone https://github.com/Datalux/Osintgram.git`
 
 2. Navigate to the directory
 
-    `cd Osintgram`
+   `cd Osintgram`
 
 3. Create a virtual environment for this project
 
-    `python3 -m venv venv`
+   `python3 -m venv venv`
 
 4. Load the virtual environment
+
    - On Windows Powershell: `.\venv\Scripts\activate.ps1`
    - On Linux and Git Bash: `source venv/bin/activate`
-  
+
 5. Run `pip install -r requirements.txt`
 
 6. Open the `credentials.ini` file in the `config` folder and write your Instagram account username and password in the corresponding fields
-    
-    Alternatively, you can run the `make setup` command to populate this file for you.
+
+   Alternatively, you can run the `make setup` command to populate this file for you.
 
 7. Run the main.py script in one of two ways
 
-    * As an interactive prompt `python3 main.py <target username>`
-    * Or execute your command straight away `python3 main.py <target username> --command <command>`
+   - As an interactive prompt `python3 main.py <target username>`
+   - Or execute your command straight away `python3 main.py <target username> --command <command>`
 
 ## Docker Quick Start 🐳
 
@@ -139,14 +140,14 @@ For ease of use with Docker-compose, a `Makefile` has been provided.
 
 Here is a sample work flow to spin up a container and run `osintgram` with just two commands!
 
-1. `make setup`   - Sets up your Instagram credentials
-2. `make run`     - Builds and Runs a osintgram container and prompts for a target
+1. `make setup` - Sets up your Instagram credentials
+2. `make run` - Builds and Runs a osintgram container and prompts for a target
 
 Sample workflow for development:
 
-1. `make setup`          - Sets up your Instagram credentials
-2. `make build-run-testing`   - Builds an Runs a container without invoking the `main.py` script. Useful for an `it` Docker session for development
-3. `make cleanup-testing`     - Cleans up the testing container created from `build-run-testing`
+1. `make setup` - Sets up your Instagram credentials
+2. `make build-run-testing` - Builds an Runs a container without invoking the `main.py` script. Useful for an `it` Docker session for development
+3. `make cleanup-testing` - Cleans up the testing container created from `build-run-testing`
 
 ## Development version 💻
 
@@ -158,14 +159,12 @@ and update to last version using:
 
 `git pull origin development`
 
-
 ## Updating ⬇️
 
 To update Osintgram with the stable release just pull the latest commit using Git.
 
 1. Make sure you are in the master branch running: `git checkout master`
 2. Download the latest version: `git pull origin master`
-
 
 ## Contributing 💡
 
@@ -180,3 +179,5 @@ Here is a list of Osintgram's contributors:
 ## External library 🔗
 
 [Instagram API](https://github.com/ping/instagram_private_api)
+
+One way sync demonstration
